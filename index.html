@@ -15,7 +15,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -44,7 +44,9 @@
       --sky:          #6da8c7;
 
       --rule:         rgba(45, 31, 23, 0.13);
-      --serif:        'Instrument Serif', Georgia, serif;
+      /* One clean, fun display family — no mid-sentence serif/italic swaps.
+         --serif kept as an alias so existing rules need no rewrite. */
+      --serif:        'Bricolage Grotesque', system-ui, sans-serif;
       --sans:         'Bricolage Grotesque', system-ui, sans-serif;
     }
 
@@ -193,8 +195,22 @@
       margin-bottom: 28px;
     }
     h1 .accent {
-      font-style: italic;
-      color: var(--coral-deep);
+      font-style: normal;
+      color: var(--brown);
+      position: relative;
+      display: inline-block;
+    }
+    h1 .accent::after {
+      content: '';
+      position: absolute;
+      left: -2%;
+      right: -2%;
+      bottom: 8%;
+      height: 18px;
+      background: var(--butter);
+      opacity: 0.7;
+      z-index: -1;
+      border-radius: 3px;
     }
     h1 .underline {
       position: relative;
@@ -425,7 +441,7 @@
       letter-spacing: -0.015em;
       margin-bottom: 2px;
     }
-    .phone-greeting em { color: var(--coral-deep); font-style: italic; }
+    .phone-greeting em { color: inherit; font-style: normal; font-weight: 700; }
     .phone-day {
       font-size: 9.5px;
       color: var(--brown-fade);
@@ -654,10 +670,11 @@
       margin-bottom: 24px;
     }
     h2 em {
-      font-style: italic;
-      color: var(--coral-deep);
+      font-style: normal;
+      color: inherit;
+      font-weight: 800;
     }
-    h2.on-butter em { color: var(--coral-deep); }
+    h2.on-butter em { color: inherit; }
     h2 .h2-underline {
       position: relative;
       display: inline-block;
@@ -1541,6 +1558,23 @@
       outline-offset: 3px;
       border-radius: 4px;
     }
+    /* ============ CLEAN + FUN TYPE PASS ============
+       Bricolage is now the single display face. It needs more weight
+       than the old serif to carry big headlines, and every leftover
+       italic / serif-arrow flourish gets flattened here. */
+    h1 { font-weight: 750; font-variation-settings: "opsz" 40; letter-spacing: -0.035em; }
+    h2 { font-weight: 720; font-variation-settings: "opsz" 32; letter-spacing: -0.03em; }
+    h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
+    .logo { font-weight: 800; letter-spacing: -0.04em; }
+    .logo .dot { font-weight: 800; }
+    /* No italic anywhere — kills the mid-sentence serif-italic look. */
+    em, i, .accent, .arrow, .ar, .footer-base em,
+    h1 em, h2 em, h3 em, .eyebrow em, .phone-greeting em {
+      font-style: normal;
+    }
+    .nav-cta .arrow, .btn-primary .arrow, .phone-btn .ar,
+    .signup-form button .arrow { font-family: var(--sans); font-weight: 600; }
+    .footer-base em { font-family: var(--sans); }
   </style>
 </head>
 <body>
