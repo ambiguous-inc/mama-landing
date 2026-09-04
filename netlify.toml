@@ -1,0 +1,33 @@
+# mama.dog landing — Netlify config
+# Static single-page site. Netlify Forms auto-detects the data-netlify form
+# in index.html (name: "cohort-application"). Enable email notifications under
+# Site settings → Forms → Form notifications.
+
+[build]
+  publish = "."
+
+# Force the apex canonical: send www → apex so SEO signals don't split.
+[[redirects]]
+  from = "https://www.mama.dog/*"
+  to = "https://mama.dog/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Long-cache immutable static assets; keep HTML fresh.
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

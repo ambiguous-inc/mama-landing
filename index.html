@@ -3,19 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mama.dog — your training app, in as little as 15 minutes</title>
-  <meta name="description" content="mama.dog gives dog content creators a fully branded subscription app — live in 15 minutes, paid in their own Stripe. The white-label platform for force-free trainers." />
+  <title>mama.dog — Your Own Branded Dog-Training App | White-Label Platform for Trainers</title>
+  <meta name="description" content="mama.dog turns any dog trainer's method into a branded subscription app — live in 15 minutes, payments in your own Stripe, any method you teach. The white-label platform for trainers building recurring income nationwide." />
 
-  <meta property="og:title" content="mama.dog — in as little as 15 minutes" />
-  <meta property="og:description" content="A fully branded training app for dog professionals. Live in 15 minutes. Paid in your own Stripe. Built on calm." />
-  <meta property="og:url" content="https://mama.dog" />
+  <link rel="canonical" href="https://mama.dog/" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="author" content="mama.dog (Ambiguous Inc.)" />
+  <meta name="theme-color" content="#f6efe4" />
+  <meta name="keywords" content="dog trainer app, white label dog training app, dog training business software, subscription app for dog trainers, dog training platform, sell dog training online, dog trainer software, launch a dog training app, recurring revenue for dog trainers, branded training app" />
+
+  <meta property="og:site_name" content="mama.dog" />
+  <meta property="og:title" content="mama.dog — Your Own Branded Dog-Training App" />
+  <meta property="og:description" content="Launch a fully branded dog-training subscription app in 15 minutes. Payments in your own Stripe. Any method you teach. Built for trainers who want recurring income." />
+  <meta property="og:url" content="https://mama.dog/" />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://mama.dog/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="mama.dog — your method, your brand, your app" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="mama.dog — Your Own Branded Dog-Training App" />
+  <meta name="twitter:description" content="Turn your training method into a branded subscription app. Live in 15 minutes. Payments in your own Stripe. Any method." />
+  <meta name="twitter:image" content="https://mama.dog/og-cover.jpg" />
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%23e87a5d%22/></svg>" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://mama.dog/#org",
+        "name": "mama.dog",
+        "legalName": "Ambiguous Inc.",
+        "url": "https://mama.dog/",
+        "logo": "https://mama.dog/og-cover.jpg",
+        "description": "The white-label dog-training platform. Trainers launch a branded subscription app in minutes, take payments in their own Stripe, and teach any method.",
+        "sameAs": []
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "mama.dog",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, iOS, Android (PWA)",
+        "url": "https://mama.dog/",
+        "publisher": { "@id": "https://mama.dog/#org" },
+        "description": "A white-label platform that turns a dog trainer's method into a fully branded subscription app — daily training missions, an AI knowledge assistant, streaks and check-ins, and Stripe payments in the trainer's own account.",
+        "offers": {
+          "@type": "Offer",
+          "category": "SaaS subscription",
+          "priceCurrency": "USD",
+          "description": "Founding-cohort pricing for professional dog trainers. Book a call to apply."
+        },
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Professional dog trainers, behaviorists, and dog content creators"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is mama.dog?",
+            "acceptedAnswer": { "@type": "Answer", "text": "mama.dog is a white-label platform that lets a dog trainer launch their own branded subscription training app — with their colors, their method, and payments landing in their own Stripe account." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I have to teach a specific method?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. A force-free 84-lesson curriculum is included by default, but you can swap in your own method and content. The platform bends to how you teach." }
+          },
+          {
+            "@type": "Question",
+            "name": "How fast can I launch?",
+            "acceptedAnswer": { "@type": "Answer", "text": "You can be live on a branded subdomain in about 15 minutes: upload your logo, pick your colors, and connect Stripe. A custom domain takes about a day to propagate." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do payments work?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Client subscriptions are charged through your own Stripe account and deposited to you directly. mama.dog takes a small platform fee — your clients pay you, not us." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <style>
     :root {
@@ -1401,48 +1478,59 @@
 
     .signup-large { max-width: 560px; margin: 48px auto 0; }
     .signup-form {
-      display: flex;
-      gap: 8px;
-      background: var(--cream);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      text-align: left;
+    }
+    .signup-form input,
+    .signup-form select {
+      width: 100%;
+      min-width: 0;
       border: 1.5px solid var(--brown);
-      border-radius: 100px;
-      padding: 6px 6px 6px 22px;
-      transition: all 0.2s ease;
-    }
-    .signup-form:focus-within {
-      border-color: var(--coral);
-      box-shadow: 0 0 0 4px rgba(239, 106, 78, 0.15);
-    }
-    .signup-form input {
-      flex: 1;
-      border: none;
-      background: transparent;
+      background: var(--cream);
       font-family: var(--sans);
       font-size: 16px;
       color: var(--brown);
       outline: none;
-      padding: 12px 0;
-      min-width: 0;
+      padding: 15px 20px;
+      border-radius: 16px;
+      transition: all 0.2s ease;
+    }
+    .signup-form .full { grid-column: 1 / -1; }
+    .signup-form input:focus,
+    .signup-form select:focus {
+      border-color: var(--coral);
+      box-shadow: 0 0 0 4px rgba(239, 106, 78, 0.14);
     }
     .signup-form input::placeholder { color: var(--brown-fade); }
+    .signup-form select { appearance: none; -webkit-appearance: none; cursor: pointer;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%237a6856' stroke-width='2'><path d='M6 9l6 6 6-6'/></svg>");
+      background-repeat: no-repeat; background-position: right 18px center; padding-right: 44px; }
+    .signup-form select:invalid { color: var(--brown-fade); }
     .signup-form button {
+      grid-column: 1 / -1;
+      justify-content: center;
       background: var(--brown);
       color: var(--cream);
       border: none;
       font-family: var(--sans);
-      font-size: 15px;
-      font-weight: 500;
-      padding: 14px 24px;
-      border-radius: 100px;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 17px 24px;
+      border-radius: 16px;
       cursor: pointer;
       transition: all 0.2s ease;
       white-space: nowrap;
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      margin-top: 2px;
     }
-    .signup-form button:hover { background: var(--coral); }
-    .signup-form button .arrow { font-family: var(--serif); font-size: 19px; font-style: italic; }
+    .signup-form button:hover { background: var(--coral); transform: translateY(-1px); }
+    .signup-form button:disabled { opacity: 0.6; cursor: default; transform: none; }
+    .signup-form button .arrow { font-family: var(--sans); font-size: 18px; font-weight: 600; }
+    @media (max-width: 560px) { .signup-form { grid-template-columns: 1fr; } }
 
     .signup-fine {
       margin-top: 18px;
@@ -1598,7 +1686,7 @@
         </h1>
 
         <p class="hero-sub">
-          mama.dog is the white-label training platform for serious dog professionals. <strong>Launch a fully branded subscription app in as little as 15 minutes</strong> &mdash; with your colors, your method, and payments landing in your own Stripe account from day one.
+          mama.dog is the white-label training platform for dog trainers &mdash; anywhere, any method. <strong>Launch a fully branded subscription app in as little as 15 minutes</strong>, with your colors, your method, and payments landing in your own Stripe account from day one.
         </p>
 
         <div class="cta-cluster">
@@ -1609,7 +1697,7 @@
           <a href="#feels" class="btn-secondary">see how it works</a>
         </div>
 
-        <div class="micro">live in minutes &middot; payments in your name &middot; built on calm</div>
+        <div class="micro">live in minutes &middot; payments in your name &middot; any method, nationwide</div>
       </div>
 
       <div class="hero-collage">
@@ -1934,39 +2022,39 @@
 
     <section class="reveal">
       <div class="section-label">who it's for</div>
-      <h2>For professionals with audiences who <em>already trust them.</em></h2>
+      <h2>For dog trainers with clients who <em>already trust them.</em></h2>
 
       <div class="who-grid">
         <div class="who-card">
           <div class="who-img"><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=300&q=80" alt="" /></div>
           <div class="who-body">
             <div class="num">i.</div>
-            <h4>Certified force-free trainers</h4>
-            <p>CCPDT, KPA, IAABC, PPG members ready to scale beyond one-on-one work.</p>
+            <h4>Independent trainers &amp; behaviorists</h4>
+            <p>Any method, any certification, anywhere in the country &mdash; ready to scale beyond one-on-one sessions.</p>
           </div>
         </div>
         <div class="who-card">
           <div class="who-img"><img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=300&q=80" alt="" /></div>
           <div class="who-body">
             <div class="num">ii.</div>
-            <h4>Dog content creators (100K+)</h4>
-            <p>Educators with engaged audiences ready for a daily-use product, not another course.</p>
+            <h4>Dog content creators &amp; educators</h4>
+            <p>An engaged audience ready for a daily-use product they pay for monthly, not another one-off course.</p>
           </div>
         </div>
         <div class="who-card">
           <div class="who-img"><img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?auto=format&fit=crop&w=300&q=80" alt="" /></div>
           <div class="who-body">
             <div class="num">iii.</div>
-            <h4>LIMA-aligned behaviorists</h4>
-            <p>Specialists in reactivity, anxiety, separation, or rescue who want a structured client touchpoint.</p>
+            <h4>Board-and-train &amp; day-training pros</h4>
+            <p>Turn the handoff into a recurring relationship &mdash; keep owners on the method long after the program ends.</p>
           </div>
         </div>
         <div class="who-card">
           <div class="who-img"><img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=300&q=80" alt="" /></div>
           <div class="who-body">
             <div class="num">iv.</div>
-            <h4>Method-driven studios</h4>
-            <p>Small training businesses ready to package their methodology as a subscription product.</p>
+            <h4>Studios, franchises &amp; multi-trainer teams</h4>
+            <p>Package your methodology as a subscription product your whole roster can deliver under one brand.</p>
           </div>
         </div>
       </div>
@@ -1999,12 +2087,24 @@
       </p>
 
       <div class="signup-large">
-        <form class="signup-form" id="brevo-form" novalidate>
-          <input type="email" id="email" placeholder="your email" required autocomplete="email" aria-label="Email address" />
+        <form class="signup-form" id="cohort-form" name="cohort-application" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="cohort-application" />
+          <p style="display:none"><label>Leave this empty: <input name="bot-field" /></label></p>
+          <input type="text" id="name" name="name" placeholder="your name" required autocomplete="name" aria-label="Your name" />
+          <input type="email" id="email" name="email" placeholder="your email" required autocomplete="email" aria-label="Email address" />
+          <input type="text" id="business" name="business" class="full" placeholder="business name or @handle (optional)" autocomplete="organization" aria-label="Business name or handle" />
+          <select id="audience" name="audience" class="full" required aria-label="Audience or client size">
+            <option value="" disabled selected>audience / client size</option>
+            <option>Just getting started</option>
+            <option>Under 10k followers / a few clients</option>
+            <option>10k–100k followers</option>
+            <option>100k+ followers</option>
+            <option>Established practice with a waitlist</option>
+          </select>
           <button type="submit">request a call <span class="arrow">&rarr;</span></button>
         </form>
         <p class="signup-fine">
-          For <strong>certified trainers and dog content creators only.</strong> We read every application personally.
+          For <strong>professional dog trainers, behaviorists, and dog creators.</strong> Any method. We read every application personally.
         </p>
         <div class="signup-success" id="success">
           Got it. We'll be in touch within 48 hours.
@@ -2018,7 +2118,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#" class="logo">mama<span class="dot">.</span><span class="tld">dog</span></a>
-          <p>The white-label training platform for force-free and LIMA professionals. Currently building with a founding cohort of certified trainers.</p>
+          <p>The white-label training platform for dog trainers &mdash; any method, anywhere. Currently building with a founding cohort of professional trainers.</p>
         </div>
         <div class="footer-col">
           <h5>Platform</h5>
@@ -2034,34 +2134,66 @@
       </div>
       <div class="footer-base">
         <div>&copy; 2026 Ambiguous Inc. &middot; mama.dog</div>
-        <div><em>Force-free and LIMA-aligned methodology only.</em></div>
+        <div><em>Your method, your brand &mdash; the platform bends to how you teach.</em></div>
       </div>
     </div>
   </footer>
 
   <script>
-    const BREVO_FORM_URL = '';
-
-    const form = document.getElementById('brevo-form');
+    // Applications post to Netlify Forms (captured in the Netlify dashboard;
+    // turn on email notifications there). A mailto is only a last-resort
+    // fallback if the Netlify POST fails, so no lead is ever silently dropped.
+    const form = document.getElementById('cohort-form');
     const success = document.getElementById('success');
     const emailInput = document.getElementById('email');
+    const nameInput = document.getElementById('name');
+    const audienceInput = document.getElementById('audience');
+    const submitBtn = form.querySelector('button[type="submit"]');
 
-    form.addEventListener('submit', async function(e) {
+    const encode = (data) =>
+      Object.keys(data)
+        .map((k) => encodeURIComponent(k) + '=' + encodeURIComponent(data[k]))
+        .join('&');
+
+    form.addEventListener('submit', async function (e) {
       e.preventDefault();
       const email = emailInput.value.trim();
-      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        emailInput.focus();
-        return;
-      }
-      if (BREVO_FORM_URL) {
-        try {
-          const fd = new FormData();
-          fd.append('EMAIL', email);
-          await fetch(BREVO_FORM_URL, { method: 'POST', body: fd, mode: 'no-cors' });
-        } catch (err) { console.error(err); }
-      } else {
-        window.location.href = 'mailto:hello@mama.dog?subject=mama.dog%20founding%20cohort%20application&body=' +
-          encodeURIComponent('Email: ' + email + '\n\nI would like to apply to the mama.dog founding cohort.\n\nA bit about me and my audience:\n\n');
+      const name = nameInput.value.trim();
+      if (!name) { nameInput.focus(); return; }
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { emailInput.focus(); return; }
+      if (!audienceInput.value) { audienceInput.focus(); return; }
+
+      submitBtn.disabled = true;
+      const payload = {
+        'form-name': 'cohort-application',
+        name,
+        email,
+        business: (document.getElementById('business').value || '').trim(),
+        audience: audienceInput.value
+      };
+
+      let ok = false;
+      try {
+        const res = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: encode(payload)
+        });
+        ok = res.ok;
+      } catch (err) { console.error(err); }
+
+      if (!ok) {
+        // Fallback: open a pre-filled email so the lead still reaches us.
+        window.location.href =
+          'mailto:hello@mama.dog?subject=' +
+          encodeURIComponent('mama.dog founding cohort application') +
+          '&body=' +
+          encodeURIComponent(
+            'Name: ' + name + '\nEmail: ' + email +
+            '\nBusiness/handle: ' + payload.business +
+            '\nAudience/clients: ' + payload.audience +
+            '\n\nI would like to apply to the mama.dog founding cohort.'
+          );
       }
       form.style.display = 'none';
       success.classList.add('show');
